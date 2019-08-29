@@ -15,6 +15,7 @@
     <!-- OWL -->
     <link rel="stylesheet" href="assets_front/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets_front/css/owl.theme.default.min.css">
+    
 </head>
 <body> 
 
@@ -27,7 +28,7 @@
             <span>Visit our Social page:</span><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i>
         </div>
         <div>
-            <a href="#">Apply Now</a>
+            <a href="#ex1" rel="modal:open">Apply Now</a>
         </div>
     </div>
 </section>
