@@ -22,12 +22,12 @@
 <section class="top-nav">
     <div class="container d-flex justify-content-between align-items-center">
         <div>
-            <i class="fas fa-phone-square-alt"></i> <span>+977-123456</span> | <i class="fas fa-envelope"></i> <span>example@gmail.com</span> </<i>
+            <i class="fas fa-mobile"></i> <span>+977-123456</span> | <i class="fas fa-envelope"></i> <span>example@gmail.com</span> </<i>
         </div>
-        <div>
-            <span>Visit our Social page:</span><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i>
+        <div class="top_socialmedia">
+            <span>Visit our Social page:</span><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-        <div>
+        <div class="apply_btn">
             <a href="#ex1" rel="modal:open">Apply Now</a>
         </div>
     </div>

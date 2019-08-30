@@ -16,22 +16,32 @@
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-6">
                 <label for="email">Address</label>
                 <input type="email" class="form-control" id="" placeholder="Enter your full address">
             </div>
-        </div>
-        <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="fullname">Phone Number</label>
                 <input type="text" class="form-control" id="" placeholder="Enter your phone number">
             </div>
         </div>
         <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="">Education Level</label>
+                <input type="text" class="form-control" id="" placeholder="Education level completed">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="">Education Completion year</label> 
+                <input type="text" class="form-control" id="" placeholder="mm/dd/yyyy">
+            </div>
+        </div>
+        <div class="form-row">
             <label for="message">Query</label>
             <textarea class="form-control" id="" rows="3" placeholder="Enter your query"></textarea>
         </div>
-        <button type="submit" class="btn">SUBMIT</button>
+        <div class="form-row  mt-4">
+            <button type="submit" class="btn">SUBMIT</button>
+        </div>
     </form>
 </section>
 
@@ -198,63 +208,66 @@
 <section class="testimonials">
     <div class="container">
         <div class="row">
-            <!-- <div class="mb-auto testimonials_top">
-                <h1>Trusted by many people</h1>
-            </div> -->
             <div class="comment_bg d-flex align-items-end ">
                 <i class="fas fa-comments"></i>
             </div>
-            <div class="col-sm-6 owl-carousel owl-theme d-flex align-items-end" id="testimonial_carousel">
-                <div class="item">
-                    <div class="intro d-flex align-items-center">
-                        <div class="image"><img src="assets_front/img/client-4.jpg" alt=""></div>
-                        <div class="info">
-                            <h5>Name</h5>
-                            <p>Country</p>
-                            <p>University</p>
-                        </div>
-                    </div>
-                    <div class="words">
-                        <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
-                    </div>
+            <div class="col-sm-6 d-flex align-items-end flex-column">
+                <div class="mb-auto testimonials_top d-flex flex-column justify-content-center">
+                    <h1>Trusted by many people</h1>
+                    <p>THE SERVICE YOU EXPECT, THE QUALITY YOU DESERVE</p>
                 </div>
-                <div class="item">
-                    <div class="intro d-flex align-items-center">
-                        <div class="image"><img src="assets_front/img/client-3.jpg" alt=""></div>
-                        <div class="info">
-                            <h5>Name</h5>
-                            <p>Country</p>
-                            <p>University</p>
+                <div class="owl-carousel owl-theme" id="testimonial_carousel">
+                    <div class="item">
+                        <div class="intro d-flex align-items-center">
+                            <div class="image"><img src="assets_front/img/client-4.jpg" alt=""></div>
+                            <div class="info">
+                                <h5>Name</h5>
+                                <p>Country</p>
+                                <p>University</p>
+                            </div>
+                        </div>
+                        <div class="words">
+                            <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
                         </div>
                     </div>
-                    <div class="words">
-                        <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="intro d-flex align-items-center">
-                        <div class="image"><img src="assets_front/img/client-5.jpg" alt=""></div>
-                        <div class="info">
-                            <h5>Name</h5>
-                            <p>Country</p>
-                            <p>University</p>
+                    <div class="item">
+                        <div class="intro d-flex align-items-center">
+                            <div class="image"><img src="assets_front/img/client-3.jpg" alt=""></div>
+                            <div class="info">
+                                <h5>Name</h5>
+                                <p>Country</p>
+                                <p>University</p>
+                            </div>
+                        </div>
+                        <div class="words">
+                            <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
                         </div>
                     </div>
-                    <div class="words">
-                        <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="intro d-flex align-items-center">
-                        <div class="image"><img src="assets_front/img/client-2.jpg" alt=""></div>
-                        <div class="info">
-                            <h5>Name</h5>
-                            <p>Country</p>
-                            <p>University</p>
+                    <div class="item">
+                        <div class="intro d-flex align-items-center">
+                            <div class="image"><img src="assets_front/img/client-5.jpg" alt=""></div>
+                            <div class="info">
+                                <h5>Name</h5>
+                                <p>Country</p>
+                                <p>University</p>
+                            </div>
+                        </div>
+                        <div class="words">
+                            <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
                         </div>
                     </div>
-                    <div class="words">
-                        <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
+                    <div class="item">
+                        <div class="intro d-flex align-items-center">
+                            <div class="image"><img src="assets_front/img/client-2.jpg" alt=""></div>
+                            <div class="info">
+                                <h5>Name</h5>
+                                <p>Country</p>
+                                <p>University</p>
+                            </div>
+                        </div>
+                        <div class="words">
+                            <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo commodi tenetur labore fuga! Corporis error ullam quas, saepe tempore facilis. <i class="fas fa-quote-right"></i></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,9 +277,13 @@
 
 <section class="news">
     <div class="container">
-        <div class="news_top">
-            <h1>NEWS & EVENTS</h1>
-            <p>Keep yourself update</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="mb-auto news_top d-flex flex-column justify-content-center align-items-center">
+                    <h1>NEWS & EVENTS</h1>
+                    <p>Keep yourself update</p>
+                </div>
+            </div>
         </div>
         <div class="news_wrapper owl-carousel owl-theme" id="news_carousel">
             <div class="news_item">
@@ -323,72 +340,16 @@
             </div>
         </div>
         <div class="owl-carousel owl-theme" id="university_carousel">
-            <div class="item img_wrapper" style="background: url('assets_front/img/university6.jpg');"></div>
-            <div class="item img_wrapper" style="background: url('assets_front/img/university5.jpg');"></div>
-            <div class="item img_wrapper" style="background: url('assets_front/img/university3.jpg');"></div>
-            <div class="item img_wrapper" style="background: url('assets_front/img/university7.jpg');"></div>
-            <div class="item img_wrapper" style="background: url('assets_front/img/university2.jpg');"></div>
-            <div class="item img_wrapper" style="background: url('assets_front/img/university6.jpg');"></div>
-            <div class="item img_wrapper" style="background: url('assets_front/img/university4.jpg');"></div>
+            <div class="items item-1"><img src="assets_front/img/university5.jpg" alt=""></div>
+            <div class="items item-1"><img src="assets_front/img/university3.jpg" alt=""></div>
+            <div class="items item-1"><img src="assets_front/img/university7.jpg" alt=""></div>
+            <div class="items item-1"><img src="assets_front/img/university2.jpg" alt=""></div>
+            <div class="items item-1"><img src="assets_front/img/university6.jpg" alt=""></div>
+            <div class="items item-1"><img src="assets_front/img/university5.jpg" alt=""></div>
+            <div class="items item-1"><img src="assets_front/img/university4.jpg" alt=""></div>
         </div>
     </div>
 </section>
 
-<!-- <section class="class">
-    <div class="container">
-        <div class="row class_title d-flex justify-content-center box-1">
-            <div class="col-sm-8 text-center">
-                <h1>Test Preparation</h1>
-            </div>
-            <div class="logo">
-                <img src="assets_front/img/ilogo.png" alt="">
-            </div>
-        </div>
-        <div class="owl-carousel" id="class_carousel">
-            <div class="item">
-                <div class="class_title img_wrapper d-flex align-items-end"><h3>GMAT</h3></div>
-                <div class="class_text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sapiente.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="class_title img_wrapper d-flex align-items-end"><h3>GRE</h3></div>
-                <div class="class_text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sapiente.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="class_title img_wrapper d-flex align-items-end"><h3>ILETS</h3></div>
-                <div class="class_text">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisis! Animi provident ducimus odio!</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="class_title img_wrapper d-flex align-items-end"><h3>TOFEL</h3></div>
-                <div class="class_text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sapiente.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="class_title img_wrapper d-flex align-items-end"><h3>SAT</h3></div>
-                <div class="class_text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, adipisci.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="class_title img_wrapper d-flex align-items-end"><h3>ACT</h3></div>
-                <div class="class_text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, illo.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <?php include('includes/footer.php'); ?>

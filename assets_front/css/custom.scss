@@ -3,7 +3,7 @@
 $color:(
     primary: #00A2B1,
     secondary: #F2FBFC,
-    oragne: #f16532
+    text: #616161
 
 );
 @function color($colorName){
@@ -40,28 +40,39 @@ a{
 .top-nav{
     background: color(primary);
     color: white;
-    a{
-        display: block;
-        color: #00A2B1;
-        padding: 6px;
-        margin: 8px;
-        background: color(secondary);
-        border-radius: 5px;
-        font-size: 14px;
-        transition: 1s;
-        border: 0.5px solid #00A2B1;
-    }
-    a:hover{
-        color: white;
-        background: #00A2B1;
-        border: 0.5px solid white;
-    }
-    i{
-        padding: 10px;
-    }
     span{
         font-size: 14px;
         color: lightblue;
+    }
+    .top_socialmedia{
+        i{
+            padding: 5px;
+            border: 0.5px solid #00A2B1;
+            border-radius: 5px;
+            transition: 1s ease;
+            margin: 3px;
+        }
+        i:hover{
+            border: 0.5px solid white;
+        }
+    }
+    .apply_btn{
+        a{
+            display: block;
+            color: #00A2B1;
+            padding: 6px;
+            margin: 8px;
+            background: color(secondary);
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 1s;
+            border: 0.5px solid #00A2B1;
+        }
+        a:hover{
+            color: white;
+            background: #00A2B1;
+            border: 0.5px solid white;
+        }
     }
 }
 
@@ -74,18 +85,23 @@ a{
         padding: 20px;
 
         label{
-            color: #00A2B1;
+            color: white;
             font-size: 19px;
         }
         button{
-            color: white;
+            background: white;
+            color: #00A2B1;
+            border: 0.5px solid white;
+            transition: 1s ease;
+            margin: auto;
+        }
+        button:hover{
             background: #00A2B1;
-            margin: 20px;
+            color: white;
         }
         input[type="text"], input[type="email"], textarea{
             border: none;
             color: #00A2B1;
-            border-bottom: 1px solid #00A2B1;
         }
         input::placeholder, textarea::placeholder{
             color: #00A2B1;
@@ -94,6 +110,10 @@ a{
         }
         
     }
+}
+.modal{
+    background: #00A2B1 !important;
+    max-width: 70% !important;
 }
 
 nav{
@@ -488,6 +508,7 @@ nav{
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            border-radius: 10px;
         }
     }
     .owl-carousel{
@@ -497,24 +518,26 @@ nav{
         margin: 0px;
     }
     .owl-carousel .owl-nav button.owl-next{
-        font-size: 50px;
+        font-size: 30px;
+        font-weight: bolder;
         position: absolute;
         background: rgba(0, 162, 177, 0.5);
         color: white;
         right:-50px;
         top: 50%;
         transform: translateY(-50%);
-        padding: 10px !important;
+        padding: 5px !important;
     }
     .owl-carousel .owl-nav button.owl-prev{
-        font-size: 50px;
+        font-size: 30px;
+        font-weight: bolder;
         position: absolute;
         background: rgba(0, 162, 177, 0.5);
         color: white;
         left:-50px;
         top: 50%;
         transform: translateY(-50%);
-        padding: 10px !important;
+        padding: 5px !important;
     }
     .country_name{
         position: absolute;
@@ -611,9 +634,9 @@ nav{
     }
 
     .testimonials_top{
-        margin-top: 150px;
-        margin-left: 50px;
-       
+        height: 100%;
+        padding-bottom: 50px;
+        margin-left: 30px;
         h1{
             color: #00A2B1;
             font-weight: bolder;
@@ -628,6 +651,10 @@ nav{
             transform: translateY(-50%);
             left: -60px;
             background: #00A2B1;
+        }
+        p{
+            color: gray;
+            padding-left: 50px;
         }
     }
 
@@ -721,6 +748,7 @@ nav{
     }
 
     .news_top{
+        margin-left: 30px;
         h1{
             color: #00A2B1;
             font-weight: bolder;
@@ -796,78 +824,108 @@ nav{
         }
     }
     #university_carousel{
-        .img_wrapper{
-            height: 200px;
+        .items{
+            height: 150px;
+        }
+        .item-1{
+            img{
+                height: 150px;
+                width: 150px;
+                object-fit: cover;
+            }
         }
     }
 }
 
-.class{
-    color: black;
+footer{
+    position: relative;
     overflow: hidden;
+    background: rgba(0, 162, 177, 0.8);
+    color: white;
+    padding: 100px 0px 0px 0px;
 
-    h1{
-        color: #00A2B1;
-        border-bottom: 1px solid #00A2B1;
-        padding-bottom: 30px;
+    a{
+        font-size: 14px;
+        margin: 8px;
+        overflow: hidden;
     }
-    h3{
-        color: white;
-    }
-    .container{
-        height: auto;
-    }
-    .class_title{
-        position: relative;
+    .footer_top{
         padding: 20px;
-        .logo{
-            position: absolute;
-            bottom: 10px;
-            height: 40px;
-            width: 40px;
-            img{
-                width: 100%;
-            }
+    }
+    .contact{
+        p{
+            font-size: 14px;
+        }
+        i{
+            padding: 5px;
+            font-size: 20px;
+        }
+        span{
+            font-weight: bolder;
+            font-size: 15px;
         }
     }
-    .item{
-        height: 400px;
-        .img_wrapper{
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/preparation.png);
-            height: 60%;
+    .social_media{
+        border-bottom: 1px solid white;
+        padding-bottom: 30px;
+        a{
+            padding: 10px 20px;
+            font-size: 20px;
+            transition: 1s ease;    
+            margin: 10px;
         }
-        .class_title{
-            position: relative;
-        }
-        .class_title::after{
-            content: "";
-            position: absolute;
-            top: -15px;
-            left: -5px;
-            right: -5px;
+        a:hover{
             background: white;
-            height: 80px;
-            transform: rotateZ(-4deg);
-        }
-
-        .class_text{
-            background: rgba(0, 162, 177, 0.7);
-            padding: 20px;
-            p{
-                color: white;
-                font-size: 15px;
-            }
-            a{
-                background: white;
-                padding: 5px 10px;
-                font-size: 12px;
-                margin: 5px;
-                border-radius: 20px;
-            }
+            color: #00A2B1;
+            border-radius: 10px;
+            font-size: 120%;
         }
     }
 
-    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
-        display: none;
+    .footer_menu{
+        a{
+            display: block;
+        }
+        span{
+            font-weight: bolder;
+        }
+        p{
+            font-size: 14px;
+        }
+        h5{
+            font-weight: bolder;
+        }
     }
+    .copyright{
+        background: #00A2B1;
+        p{
+            padding: 12px 10px 0 10px;
+            font-size: 13px;
+        }
+        i{
+            padding: 3px;
+        }
+    }
+    .effect::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: width .3s;
+    }
+    .effect:hover::after{
+        width: 100%;
+        transition: width .3s;
+    }
+}
+footer:after{
+    content: "";
+    position: absolute;
+    height: 100px;
+    left: -5px;
+    right: -5px;
+    top: -44px;
+    background: white;
+    transform: rotateZ(-4deg);
 }

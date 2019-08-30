@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    // $("#ex1").modal({
-    //     fadeDuration: 1000
-    // });
 
     $('a[href="#ex1"]').click(function (){
         $(this).modal({
@@ -22,19 +19,12 @@ $(document).ready(function(){
         speed: 1000,
         cssEase: 'linear'
     }); 
-    // $('.multiple-items').slick({
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1
-    //     // autoplay: true,
-    //     // autoplaySpeed: 2000,
-    // });
 
     $('#country_carousel').owlCarousel({
         loop:true,
         margin:10,
         nav:true,
-        autoPlay: true,
+        autoplay: true,
         dots: false,
         autoplayTimeout:2000,
         autoplayHoverPause:true,
@@ -50,33 +40,13 @@ $(document).ready(function(){
             }
         }
     })
-    $('#class_carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        dots: true,
-        autoPlay: true,
-        dots: false,
-        autoplayHoverPause:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:3
-            }
-        }
-    })
 
     $('#testimonial_carousel').owlCarousel({
         loop:true,
         margin:10,
         nav:true,
         dots: false,
-        autoPlay: true,
+        autoplay: true,
         autoplayHoverPause:true,
         responsive:{
             0:{
@@ -97,7 +67,7 @@ $(document).ready(function(){
         nav:true,
         dots: true,
         arrows:false,
-        autoPlay: true,
+        autoplay: true,
         autoplayHoverPause:true,
         responsive:{
             0:{
@@ -118,8 +88,7 @@ $(document).ready(function(){
         nav:true,
         dots: false,
         arrows:false,
-        autoPlay: true,
-        autoplayHoverPause:true,
+        autoplay: true,
         responsive:{
             0:{
                 items:1
