@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap');
 
 $color:(
-    primary: #00A2B1,
-    secondary: #F2FBFC,
+    // primary: #00A2B1,
+    primary: #2167be, // rgba(33, 103, 190, 1)
+    secondary: #e5560f, //rgba(229, 86, 15, 1)
     text: #616161
 
 );
@@ -18,9 +19,10 @@ body{
     padding: 0;
     margin: 0;
 }
+
+// -- GLOBAL CSS -- //
 a, a:hover, a:visited, a:focus{
     text-decoration: none;
-    color: inherit;
 }
 a:hover{
     cursor: pointer;
@@ -36,7 +38,112 @@ a{
     overflow: hidden;
     background-repeat: no-repeat !important;
 }
+.logo_notch_wrap{
+    h1{
+        padding-bottom: 10px;
+        font-weight: bolder;
+    }
+    .logo{
+        height: 40px;
+        width: 40px;
+        background: white;
+        position: relative;
+        
+        img{
+            width: 100%;
+        }
+    }
+    .logo:before{
+        content: "";
+        width: 400px;
+        height: 1.5px;
+        position: absolute;
+        right: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: black;
+    }
+    .logo:after{
+        content: "";
+        width: 400px;
+        height: 1.5px;
+        position: absolute;
+        left: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: black;
+    }
+}
+.inner_page_background{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    color: white;
+    h1{
+        font-weight: bolder;
+        position: relative;
+    }
+    a{
+        color: white;
+    }
+    p{
+        padding: 5px;
+    }    
+}
+.inner_page_background:after{
+    content: "";
+    background: white;
+    height: 90px;
+    left: -5px;
+    right: -5px;
+    bottom: -45px;
+    position: absolute;
+    transform: rotateZ(-4deg);
+}
+.study_test_pre{
+    h4{
+        background: #2167be;
+        padding: 20px;
+        color:white;
+    }
+    a{
+        background: color(secondary);
+        color: white;
+        padding: 10px;
+    }
+}
+.study_institution{
+    img{
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+}
+.study_contact_form{
+    form{
+        margin-top: 20px;
+        padding: 10px;
+        input[type="text"], input[type="email"], textarea{
+            border: 1px solid color(primary);
+            border-radius: 20px;
+        }
+        ::placeholder{
+            color: rgba(33, 103, 190, 0.5);
+        }
+        button{
+            background: color(secondary);
+            color: white;
+            transition: 1s ease;
+            border: 0.5px solid color(seondary);
+        }
+        button:hover{
+            color: color(secondary);
+            background:  white;
+        }
+    }
+}
 
+// -- HEADER CSS -- //
 .top-nav{
     background: color(primary);
     color: white;
@@ -47,10 +154,11 @@ a{
     .top_socialmedia{
         i{
             padding: 5px;
-            border: 0.5px solid #00A2B1;
+            border: 0.5px solid color(primary);
             border-radius: 5px;
             transition: 1s ease;
             margin: 3px;
+            color: white;
         }
         i:hover{
             border: 0.5px solid white;
@@ -59,18 +167,18 @@ a{
     .apply_btn{
         a{
             display: block;
-            color: #00A2B1;
+            color: white;
             padding: 6px;
             margin: 8px;
             background: color(secondary);
             border-radius: 5px;
             font-size: 14px;
             transition: 1s;
-            border: 0.5px solid #00A2B1;
+            border: 0.5px solid #2167be;
         }
         a:hover{
             color: white;
-            background: #00A2B1;
+            background: color(primary);
             border: 0.5px solid white;
         }
     }
@@ -78,7 +186,7 @@ a{
 
 .application_popup{
     overflow: visible;
-    background: #00A2B1;
+    background: color(primary);
   
     form{
         width: 100%;
@@ -90,21 +198,22 @@ a{
         }
         button{
             background: white;
-            color: #00A2B1;
+            color: color(primary);
             border: 0.5px solid white;
             transition: 1s ease;
             margin: auto;
+            cursor: pointer;
         }
         button:hover{
-            background: #00A2B1;
+            background: color(primary);
             color: white;
         }
         input[type="text"], input[type="email"], textarea{
             border: none;
-            color: #00A2B1;
+            color: color(primary);
         }
         input::placeholder, textarea::placeholder{
-            color: #00A2B1;
+            color: color(primary);
             font-size: 14px;
             opacity: 0.5;
         }
@@ -112,7 +221,7 @@ a{
     }
 }
 .modal{
-    background: #00A2B1 !important;
+    background: color(primary) !important;
     max-width: 70% !important;
 }
 
@@ -133,6 +242,7 @@ nav{
     }
     .nav-link{
         color: color(primary) !important;
+        font-weight: 500;
     }
     .effect::after{
         content: '';
@@ -146,32 +256,41 @@ nav{
         width: 100%;
         transition: width .3s;
     }
+
+    .dropdown{
+
+        .dropdown-menu{
+            background: color(primary);
+            padding: 0;
+        }
+        .dropdown-item{
+            color: white;
+            border-bottom: 0.5px solid white;
+            transition: 0.5s ease;
+            font-size: 14px;
+            font-weight: lighter;
+            padding: 5px;
+        }
+        .dropdown-item:hover{
+           background: white;
+           color: color(primary);
+        }
+    }
+    .dropdown-menu li:hover .sub-menu {
+        visibility: visible;
+    }
+      
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+      
 }
 
+// -- INDEX CSS -- //
 .head_slider{
     .slider{
         overflow: hidden;
-        .one{
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/c1.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100vh;
-            outline: none;
-        }
-        .two{
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/c2.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100vh;
-            outline: none;
-        }
-        .three{
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/c3.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+        .img_wrapper{
             height: 100vh;
             outline: none;
         }
@@ -187,7 +306,7 @@ nav{
     
             li {
                 margin: 0 0.25rem;
-                border: 1px solid #00A2B1;
+                border: 1px solid color(secondary);
                 border-radius: 50%;
             }
     
@@ -203,7 +322,7 @@ nav{
             }
     
             li.slick-active button {
-                background-color: #00A2B1;
+                background-color: color(secondary);
             }
         }
     
@@ -225,14 +344,15 @@ nav{
             top:50%;
             left: -80px;
             transform: translateY(-50%);
-            background: #00A2B1;
+            background: color(primary);
         }
         h2{
             font-size: 50px;
+            font-weight: bolder;
         }
         .sub-text{
             position: absolute;
-            color: #00A2B1;
+            color: color(primary);
             top:61%;
             left: 15%;
         }
@@ -241,8 +361,8 @@ nav{
             position: absolute;
             top: 75%;
             left: 15%;
-            background: #F2FBFC;
-            color: #00A2B1;
+            background: color(secondary);
+            color: white;
             padding: 10px 30px;
             border-radius: 50px;    
             overflow: hidden;
@@ -252,7 +372,7 @@ nav{
             content: '';
             display: block;
             position: absolute;
-            background: rgba(0, 162, 177, 0.5);
+            background: rgba(229, 86, 15, 0.5);
             width: 60px;
             height: 100%;
             left: 0;
@@ -266,7 +386,7 @@ nav{
             content: '';
             display: block;
             position: absolute;
-            background: rgba(0, 162, 177, 0.2);
+            background: rgba(229, 86, 15, 0.2);
             width: 30px;
             height: 100%;
             left: 30px;
@@ -288,8 +408,8 @@ nav{
             transition: .5s;
         }
         a:hover{
-            background: #00A2B1;
-            color: white;
+            background: white;
+            color: color(secondary)
         }
         
     }
@@ -313,22 +433,12 @@ nav{
 .top_intro{
     margin-bottom: 50px;
     h1{
-        color: #00A2B1;
-        border-bottom: 1px solid #00A2B1;
-        padding-bottom: 30px;
+        color: black;
+        font-weight: bolder;
+        padding-bottom: 10px;
     }
     .box-1{
-        position: relative;
         padding: 20px;
-    }
-    .logo{
-        position: absolute;
-        bottom: 10px;
-        height: 40px;
-        width: 40px;
-        img{
-            width: 100%;
-        }
     }
     .box-2{
         padding: 10px;
@@ -340,24 +450,24 @@ nav{
 }
 
 .service{
-    background: rgba(0, 162, 177, 0.2);
+    background: rgba(33, 103, 190, 0.3);
     border-top-left-radius: 100%;
     padding-top: 20px;
     a{
         padding: 10px 30px;
-        background: #00A2B1;
-        border: 0.2px solid #00A2B1;
+        background: color(secondary);
+        border: 0.2px solid color(secondary);
         color: white;
         border-radius: 20px;
         transition: 1s;
     }
     a:hover{
         background: white;
-        color: #00A2B1;
+        color: color(secondary);
     }
     .title{
         h1{
-            color: #00A2B1;
+            color: black;
             font-weight: bolder;
             position: relative;
         }
@@ -369,7 +479,7 @@ nav{
             top: 50%;
             transform: translateY(-50%);
             left: -60px;
-            background: #00A2B1;
+            background: black;
         }
         p{
             color: gray;
@@ -384,7 +494,7 @@ nav{
         height: 220px;
     }
     .service_title{
-        background: rgba(0, 162, 177, 0.8);
+        background: rgba(33, 103, 190, 0.9);
         position: absolute;
         left: 0;
         right: 0;
@@ -400,7 +510,7 @@ nav{
         opacity: 0;
         text-align: center;
         padding: 20px;
-        background: rgba(0, 162, 177, 0.7);
+        background: rgba(33, 103, 190, 0.7);
         color: white;
         position: absolute;
         left: 0;
@@ -417,13 +527,13 @@ nav{
         }
         a{
             font-size: 12px;
-            color: #00A2B1;
+            color: color(secondary);
             background: white;
             transition: 1s;
         }
         a:hover{
             color: white;
-            background: #00A2B1;
+            background: color(secondary);
         }
     }
     .service_box:hover .service_title{
@@ -435,29 +545,42 @@ nav{
 }
 
 .country{
-    padding: 30px;
-    padding-bottom: 80px;
     position: relative;
-    background: rgba(0, 162, 177, 0.2);
+    background: rgba(33, 103, 190, 0.3);
     overflow: hidden;
-    .img_wrapper{
-        height: 500px;
-        opacity: 0.2;
-    }
+    height: 650px;
     .country_top{
-        position: relative;
         padding: 20px;
+        padding-top: 50px;
     }
     .logo{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
         height: 40px;
         width: 40px;
+        position: relative;
+        
         img{
             width: 100%;
         }
+    }
+    .logo:before{
+        content: "";
+        width: 400px;
+        height: 1.5px;
+        position: absolute;
+        right: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: black;
+    }
+    .logo:after{
+        content: "";
+        width: 400px;
+        height: 1.5px;
+        position: absolute;
+        left: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: black;
     }
     .country_wrap{
         padding-bottom: 20px;
@@ -467,15 +590,12 @@ nav{
         top: 0;
 
         h1, p{
-            color: #00A2B1;
+            color: black;
             font-weight: bolder;
             padding: 20px;
         }
         p{
             color: gray;
-        }
-        h1{
-            border-bottom: 0.5px solid #00A2B1;
         }
     
         .country-slider{
@@ -521,7 +641,7 @@ nav{
         font-size: 30px;
         font-weight: bolder;
         position: absolute;
-        background: rgba(0, 162, 177, 0.5);
+        background: rgba(229, 86, 15, 1);
         color: white;
         right:-50px;
         top: 50%;
@@ -532,7 +652,7 @@ nav{
         font-size: 30px;
         font-weight: bolder;
         position: absolute;
-        background: rgba(0, 162, 177, 0.5);
+        background: rgba(229, 86, 15, 1);
         color: white;
         left:-50px;
         top: 50%;
@@ -546,17 +666,16 @@ nav{
         bottom: 10%;
         transition: 1s ease;
         a{
-            background: white;
-            color: #00A2B1;
+            background: color(secondary);
+            color: white;
             padding: 5px 30px;
             border-radius: 20px;
             font-size: 14px;
-            border: 0.5px solid #00A2B1;
             transition: 1s ease;
         }
         a:hover{
-            background: #00A2B1;
-            color: white;
+            color: color(secondary);
+            background: white;
         }
     }
     .box:hover .country_name{
@@ -576,15 +695,15 @@ nav{
 
 .counter{
     padding: 0 30px;
-    color: #00A2B1;
+    color: color(primary);
     text-align: center;
 
     .counter_top_wrap{
         position: relative;
             padding: 20px;
         p{
-            color: #00A2B1;
-            border-bottom: 1px solid #00A2B1;
+            color: color(primary);
+            border-bottom: 1px solid color(primary);
             padding-bottom: 30px;
         }
         .logo{
@@ -603,7 +722,7 @@ nav{
         text-align: center;
     }
     .count_box{
-        background: #00A2B1;
+        background: color(primary);
         padding: 30px;
         border-radius: 50%;
         width: 100px;
@@ -616,7 +735,7 @@ nav{
         color: white;
     }
     .rightborder{
-        border-right: 1px solid #00A2B1;
+        border-right: 1px solid color(primary);
     }
     h6{
         padding: 10px;
@@ -624,7 +743,7 @@ nav{
 }
 
 .testimonials{
-    background: url(../img/TestimonialsBG.png);
+    background: url(../img/Testimonials2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -638,7 +757,7 @@ nav{
         padding-bottom: 50px;
         margin-left: 30px;
         h1{
-            color: #00A2B1;
+            color: black;
             font-weight: bolder;
             position: relative;
         }
@@ -650,7 +769,7 @@ nav{
             top: 50%;
             transform: translateY(-50%);
             left: -60px;
-            background: #00A2B1;
+            background: black;
         }
         p{
             color: gray;
@@ -669,7 +788,7 @@ nav{
         font-weight: bolder;
         position: absolute;
         background: white;
-        color: rgba(0, 162, 177, 0.5);
+        color: rgba(33, 103, 190, 0.5);
         right:-40px;
         bottom: 90px;
         transform: translateY(-50%);
@@ -680,7 +799,7 @@ nav{
         font-weight: bolder;
         position: absolute;
         background: white;
-        color: rgba(0, 162, 177, 0.5);
+        color: rgba(33, 103, 190, 0.5);
         left:-40px;
         bottom: 100px;
         transform: translateY(-50%);
@@ -704,18 +823,18 @@ nav{
             padding: 20px;
             h5{
                 font-weight: bolder;
-                color: gray;
+                color: black;
             }
             p{
                 margin: 0;
-                color: gray;
+                color: black;
             }
         }
     }
     .words{
         p{
             font-size: 15px;
-            color: gray;
+            color: black;
             padding: 20px;
         }
         .fas{
@@ -750,7 +869,7 @@ nav{
     .news_top{
         margin-left: 30px;
         h1{
-            color: #00A2B1;
+            color: black;
             font-weight: bolder;
             position: relative;
         }
@@ -762,7 +881,7 @@ nav{
             top: 50%;
             transform: translateY(-50%);
             left: -60px;
-            background: #00A2B1;
+            background: black;
         }
         p{
             color: gray;
@@ -770,20 +889,21 @@ nav{
     }
 
     h4{
-        color: #00A2B1;
+        color: black;
+        padding-top: 20px;
     }
     p{
         color: gray;
     }
     a{
-        background: #00A2B1;
+        background: color(secondary);
         padding: 5px 30px;
         color: white;
         border-radius: 5px;
-        border: 0.5px solid #00A2B1;
+        border: 0.5px solid color(secondary);
     }
     a:hover{
-        color: #00A2B1;
+        color: color(secondary);
         background: white;
     }
 
@@ -791,7 +911,7 @@ nav{
         position: absolute;
         top: 34.4%;
         span{
-            background: #00A2B1;
+            background: color(secondary);
             color: white;
             padding: 5px;
         }
@@ -800,12 +920,11 @@ nav{
 
 .university_partners{
     h1{
-        color: #00A2B1;
-        border-bottom: 1px solid #00A2B1;
-        padding-bottom: 30px;
+        color: black;
+        padding-bottom: 10px;
+        font-weight: bolder;
     }
     .university_top{
-        position: relative;
         padding: 20px;
     }
     p{
@@ -813,15 +932,34 @@ nav{
         padding: 20px;
     }
     .logo{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 37%;
         height: 40px;
         width: 40px;
+        background: white;
+        position: relative;
+        
         img{
             width: 100%;
         }
+    }
+    .logo:before{
+        content: "";
+        width: 400px;
+        height: 1.5px;
+        position: absolute;
+        right: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: black;
+    }
+    .logo:after{
+        content: "";
+        width: 400px;
+        height: 1.5px;
+        position: absolute;
+        left: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: black;
     }
     #university_carousel{
         .items{
@@ -837,10 +975,11 @@ nav{
     }
 }
 
+// -- FOOTER CSS -- //
 footer{
     position: relative;
     overflow: hidden;
-    background: rgba(0, 162, 177, 0.8);
+    background: rgba(33, 103, 190, 1);
     color: white;
     padding: 100px 0px 0px 0px;
 
@@ -848,6 +987,10 @@ footer{
         font-size: 14px;
         margin: 8px;
         overflow: hidden;
+        color: white;   
+    }
+    a:hover{
+        color: white;
     }
     .footer_top{
         padding: 20px;
@@ -864,6 +1007,10 @@ footer{
             font-weight: bolder;
             font-size: 15px;
         }
+        h5{
+            font-size: 25px;
+            font-weight: bolder;
+        }
     }
     .social_media{
         border-bottom: 1px solid white;
@@ -876,7 +1023,7 @@ footer{
         }
         a:hover{
             background: white;
-            color: #00A2B1;
+            color: color(primary);
             border-radius: 10px;
             font-size: 120%;
         }
@@ -897,7 +1044,7 @@ footer{
         }
     }
     .copyright{
-        background: #00A2B1;
+        background: #0d47a1;
         p{
             padding: 12px 10px 0 10px;
             font-size: 13px;
@@ -928,4 +1075,121 @@ footer:after{
     top: -44px;
     background: white;
     transform: rotateZ(-4deg);
+}
+
+// -- CONTACT CSS -- //
+.contact_us{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/contact.jpg);
+    }
+    .mail_img{
+        padding: 20px;
+    }
+    .form_wrapper{
+        img{
+            width: 80%;
+        }
+    }
+    form{
+        padding: 30px;
+        input[type="text"], input[type="email"], textarea{
+            border: 1px solid color(primary);
+            border-radius: 20px;
+        }
+        ::placeholder{
+            color: rgba(33, 103, 190, 0.5);
+        }
+        button{
+            background: color(secondary);
+            color: white;
+            transition: 1s ease;
+            border: 0.5px solid color(seondary);
+        }
+        button:hover{
+            color: color(secondary);
+            background:  white;
+        }
+    }
+}
+
+// -- STUDY IN UK CSS -- //
+.study-uk {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/ukbg.jpg);
+    }
+    .container{
+        p{
+            color: gray;
+        }
+    }
+}
+
+// -- STUDY IN USA CSS -- //
+.study-usa {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/usabg.jpg);
+    }
+}
+
+// -- STUDY IN AUSTRALIA CSS -- //
+.study-aust {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/austbg.jpg);
+    }
+}
+
+// -- STUDY IN CANADA CSS -- //
+.study-canada {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/canadabg.jpg);
+    }
+}
+
+// -- STUDY IN JAPAN CSS -- //
+.study-japan{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/japanbg.jpg);
+    }
+}
+
+// -- STUDY IN NEW ZEALAND CSS -- //
+.study-newzealand {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/newzbg.jpg);
+    }
+}
+
+// -- IELTS COURSE CSS --//@at-root
+.ielts_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class1.jpg);
+    }
+}
+
+// --  GRE COURSE CSS --//@at-root
+.gre_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class2.png);
+    }
+}
+
+// -- TOFELS COURSE CSS --//@at-root
+.tofels_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class3.png);
+    }
+}
+
+// -- GMAT COURSE CSS --//@at-root
+.gmat_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class4.jpg);
+    }
+}
+
+// -- SAT COURSE CSS --//@at-root
+.sat_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class5.jpg);
+    }
 }

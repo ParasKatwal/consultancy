@@ -3,61 +3,19 @@
 ?> 
 <?php include('includes/header.php'); ?>
 
-<section class="application_popup modal" id="ex1">
-    <form>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="fullname">Full Name</label>
-                <input type="text" class="form-control" id="" placeholder="Enter your full name">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="" placeholder="Enter your email">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="email">Address</label>
-                <input type="email" class="form-control" id="" placeholder="Enter your full address">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="fullname">Phone Number</label>
-                <input type="text" class="form-control" id="" placeholder="Enter your phone number">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="">Education Level</label>
-                <input type="text" class="form-control" id="" placeholder="Education level completed">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="">Education Completion year</label> 
-                <input type="text" class="form-control" id="" placeholder="mm/dd/yyyy">
-            </div>
-        </div>
-        <div class="form-row">
-            <label for="message">Query</label>
-            <textarea class="form-control" id="" rows="3" placeholder="Enter your query"></textarea>
-        </div>
-        <div class="form-row  mt-4">
-            <button type="submit" class="btn">SUBMIT</button>
-        </div>
-    </form>
-</section>
-
 <section class="head_slider">
     <div class="slider">
-        <div class="one">
+        <div class="img_wrapper" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets_front/img/c2.jpg');">
             <div class="text"><h1>Study</h1></div>
             <div class="sub-text"><h2>Aboard program</h2></div>
             <a href="#">APPLY NOW</a>
         </div>
-        <div class="two">
+        <div class="img_wrapper" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets_front/img/c1.jpg');">
             <div class="text"><h1>Study</h1></div>
             <div class="sub-text"><h2>Aboard program</h2></div>
             <a href="#">APPLY NOW</a>
         </div>
-        <div class="three">
+        <div class="img_wrapper" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets_front/img/c3.jpg');">
             <div class="text"><h1>Study</h1></div>
             <div class="sub-text"><h2>Aboard program</h2></div>
             <a href="#">APPLY NOW</a>
@@ -67,12 +25,12 @@
 
 <section class="top_intro">
     <div class="container">
-        <div class="row d-flex justify-content-center box-1">
-            <div class="col-sm-10 text-center">
-                <h1>Who we are !</h1>
-            </div>
-            <div class="logo">
-                <img src="assets_front/img/ilogo.png" alt="">
+        <div class="row box-1">
+            <div class="logo_notch_wrap col-sm-12 d-flex flex-column justify-content-center align-items-center">
+                <div><h1>WHO WE ARE !</h1></div>
+                <div class="logo">
+                    <img src="assets_front/img/U.svg" alt="">
+                </div>
             </div>
         </div>
         <div class="row d-flex justify-content-center box-2">
@@ -87,7 +45,7 @@
     <div class="container">
         <div class="row">
             <div class="title col-sm-12 col-md-5 d-flex align-items-center flex-column justify-content-center">
-                <h1>Our Service</h1>
+                <h1>OUR SERVICE</h1>
                 <p>THE SERVICE YOU EXPECT, THE QUALITY YOU DESERVE</p>
                 <a href="#">Contact Us</a>
             </div>
@@ -140,15 +98,17 @@
 </section>
 
 <section class="country">
-    <div class="img_wrapper" style="background: url('assets_front/img/Tmap2.png');"></div>
+    <!-- <div class="img_wrapper" style="background: url('assets_front/img/Tmap2.png');"></div> -->
     <div class="country_wrap container text-center">
         <div class="country_top">
-            <div>
-                <h1>STUDY ABROAD</h1>
-                <p>Your Choice, Our Support</p>
+            <div class="logo_wrap col-sm-12 d-flex flex-column justify-content-center align-items-center">
+                <div><h1>STUDY ABROAD</h1></div>
+                <div class="logo">
+                    <img src="assets_front/img/U.svg" alt="">
+                </div>
             </div>
-            <div class="logo">
-                <img src="assets_front/img/Tilogo.png" alt="">
+            <div class="text-center">
+                <p>Your Choice, Our Support</p>
             </div>
         </div>
         <div class="country-slider owl-carousel owl-theme" id="country_carousel">
@@ -213,7 +173,7 @@
             </div>
             <div class="col-sm-6 d-flex align-items-end flex-column">
                 <div class="mb-auto testimonials_top d-flex flex-column justify-content-center">
-                    <h1>Trusted by many people</h1>
+                    <h1>TRUSTED BY MANY PEOPLE</h1>
                     <p>THE SERVICE YOU EXPECT, THE QUALITY YOU DESERVE</p>
                 </div>
                 <div class="owl-carousel owl-theme" id="testimonial_carousel">
@@ -329,11 +289,11 @@
 <section class="university_partners">
     <div class="container">
         <div class="university_top">
-            <div class="text-center">
-                <h1>PARTNERING UNIVERSITIES</h1>
-            </div>
-            <div class="logo">
-                <img src="assets_front/img/ilogo.png" alt="">
+            <div class="logo_wrap col-sm-12 d-flex flex-column justify-content-center align-items-center">
+                <div><h1>PARTNERING UNIVERSITIES</h1></div>
+                <div class="logo">
+                    <img src="assets_front/img/U.svg" alt="">
+                </div>
             </div>
             <div class="text-center">
                 <p>Partnering with More Than 100 Universities Globally</p>
@@ -350,6 +310,5 @@
         </div>
     </div>
 </section>
-
 
 <?php include('includes/footer.php'); ?>

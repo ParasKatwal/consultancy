@@ -35,34 +35,104 @@
 
 <section>
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="assets_front/img/Tlogo.png" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="assets_front/img/logo2.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                <a class="nav-link effect" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link effect" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link effect" href="#">Courses</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="lelts.php">IELTS</a>
+                        <a class="dropdown-item" href="gre.php">GRE</a>
+                        <a class="dropdown-item" href="tofels.php">TOFELS</a>
+                        <a class="dropdown-item" href="gmat.php">GMAT</a>
+                        <a class="dropdown-item" href="sat.php">SAT</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link effect" href="#">Study Abroad</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link effect" href="#">About us</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Study Abroad
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="study-uk.php">Study in UK</a>
+                        <a class="dropdown-item" href="study-usa.php">Study in USA</a>
+                        <a class="dropdown-item" href="study-aust.php">Study in Australia</a>
+                        <a class="dropdown-item" href="study-canada.php">Study in Canada</a>
+                        <a class="dropdown-item" href="study-japan.php">Study in Japan</a>
+                        <a class="dropdown-item" href="study-newzealand.php">Study in New Zealand</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link effect" href="#">Testimonials</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link effect" href="#">News feed</a>
+                    <a class="nav-link effect" href="#">News</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">CEO's Message</a>
+                        <a class="dropdown-item" href="#">Our Team</a>
+                        <a class="dropdown-item" href="#">OFFICE</a>
+                        <a class="dropdown-item" href="#">SERVICE</a>
+                        <a class="dropdown-item" href="#">OPEN HOUR</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link effect" href="#">Contact</a>
+                    <a class="nav-link effect" href="contact.php">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
+</section>
+
+<section class="application_popup modal" id="ex1">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="fullname">Full Name</label>
+                <input type="text" class="form-control" id="" placeholder="Enter your full name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">Address</label>
+                <input type="email" class="form-control" id="" placeholder="Enter your full address">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="fullname">Phone Number</label>
+                <input type="text" class="form-control" id="" placeholder="Enter your phone number">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="">Education Level</label>
+                <input type="text" class="form-control" id="" placeholder="Education level completed">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="">Education Completion year</label> 
+                <input type="text" class="form-control" id="" placeholder="mm/dd/yyyy">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="message">Query</label>
+            <textarea class="form-control" id="" rows="3" placeholder="Enter your query"></textarea>
+        </div>
+        <div class="form-row  mt-4">
+            <button type="submit" class="btn">SUBMIT</button>
+        </div>
+    </form>
 </section>

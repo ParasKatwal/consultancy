@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-sm-6 col-md-3 contact">
-                <div class="p-3"><h2>Reach Us</h2></div>
+                <div class="p-3"><h5>Reach Us</h5></div>
                 <div>
                     <p><i class="fas fa-map-marker-alt"></i> <span> Head office:</span> Kathmandu, Nepal</p>
                     <p><i class="fas fa-mobile"></i> <span> Phone number:</span> 987654321</p>
@@ -59,8 +59,17 @@
     </div>
     <div class="copyright">
         <div class="container d-flex justify-content-between">
-            <div class="d-flex"><p>Copyright<i class="far fa-copyright"></i>2019</p> <p><a href="#">Institute</a></p> <p>All rights reserved </p> <p>Developed by :<a href="#">Ultrabyte</a></p></div>
-            <div class="d-flex"><p><a href="#">Terms of use</a></p><p>|</p><p><a href="#">Privacy Policy</a></p></div>
+            <div class="d-flex">
+                <p>Copyright<i class="far fa-copyright"></i>2019</p>
+                <p><a href="#">Institute</a></p>
+                <p>All rights reserved </p>
+                <p>Developed by :<a href="#">Ultrabyte</a></p>
+            </div>
+            <div class="d-flex">
+                <p><a href="#">Terms of use</a></p>
+                <p>|</p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
         </div>
     </div>
 </footer>
