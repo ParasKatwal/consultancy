@@ -7,10 +7,12 @@ $color:(
     text: #616161
 
 );
+
 @function color($colorName){
     @return map-get($map: $color, $key: $colorName )
 };
 
+// GLOBAL
 body{
     background-color: #ffffff;
     color: #000000;
@@ -19,8 +21,6 @@ body{
     padding: 0;
     margin: 0;
 }
-
-// -- GLOBAL CSS -- //
 a, a:hover, a:visited, a:focus{
     text-decoration: none;
 }
@@ -39,6 +39,7 @@ a{
     background-repeat: no-repeat !important;
 }
 .logo_notch_wrap{
+    overflow: hidden;
     h1{
         padding-bottom: 10px;
         font-weight: bolder;
@@ -90,36 +91,107 @@ a{
         padding: 5px;
     }    
 }
-.inner_page_background:after{
-    content: "";
-    background: white;
-    height: 90px;
-    left: -5px;
-    right: -5px;
-    bottom: -45px;
-    position: absolute;
-    transform: rotateZ(-4deg);
+.study{
+    .container{
+        margin: 30px auto;
+        p{
+            color: gray;
+        }
+    }
+    .apply_btn{
+        margin-bottom: 10px;
+        a{
+            background: color(secondary);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 5px;
+            border: 1px solid color(secondary);
+            transition: 1s ease;
+        }
+        a:hover{
+            color: color(secondary);
+            background: white;
+        }
+    }
+    .logo_notch_wrap{
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
 }
-.study_test_pre{
-    h4{
-        background: #2167be;
-        padding: 20px;
-        color:white;
+.study_right_menu{
+
+    .related{
+        padding: 0;
+        background: rgba(33, 103, 190, 0.3);
+    }
+    .classes{
+        padding: 0;
+        background: rgba(33, 103, 190, 0.3);
+    }
+    h5{
+        background: color(primary);
+        padding: 10px 20px;
+        color: white;
     }
     a{
-        background: color(secondary);
-        color: white;
-        padding: 10px;
+        color: black;
+        display: block;
+        padding: 3px;
+        font-size: 15px;
+        border-bottom: 0.1px solid #2167be;
+        transition: 0.5s ease;
+    }
+    a:hover{
+       background: color(primary);
+       color: white;
+    }
+    i{
+        padding: 5px;
+        font-size: 20px;
     }
 }
-.study_institution{
-    img{
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
+.study_left_menu{
+    .menu{
+        height: 220px;
+        width: 220px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+            transition: 1s ease;
+        }
     }
+    .menu:hover img{
+        transform: scale(1.2);
+    }
+    .menu-text{
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(33, 103, 190, 0.4);
+        h5{
+            line-height: 200px;
+            font-weight: bolder;
+        }
+    }
+    .apply_btn{
+        a{
+            background: color(secondary);
+            color: white;
+            padding: 20px 50px;
+        }
+    }
+
 }
 .study_contact_form{
+    background: rgba(33, 103, 190, 0.3);
+    height: 550px;
+    padding: 30px 20px;
     form{
         margin-top: 20px;
         padding: 10px;
@@ -143,7 +215,7 @@ a{
     }
 }
 
-// -- HEADER CSS -- //
+// HEADER
 .top-nav{
     background: color(primary);
     color: white;
@@ -183,7 +255,6 @@ a{
         }
     }
 }
-
 .application_popup{
     overflow: visible;
     background: color(primary);
@@ -197,16 +268,16 @@ a{
             font-size: 19px;
         }
         button{
-            background: white;
-            color: color(primary);
-            border: 0.5px solid white;
+            background: color(secondary);
+            color: white;
+            border: 0.5px solid color(secondary);
             transition: 1s ease;
             margin: auto;
             cursor: pointer;
         }
         button:hover{
-            background: color(primary);
-            color: white;
+            background: white;
+            color: color(secondary);
         }
         input[type="text"], input[type="email"], textarea{
             border: none;
@@ -217,15 +288,19 @@ a{
             font-size: 14px;
             opacity: 0.5;
         }
-        
     }
 }
 .modal{
     background: color(primary) !important;
     max-width: 70% !important;
 }
-
 nav{
+    button{
+        background: color(secondary) !important;
+        i{
+            color: white;
+        }
+    }
     .navbar-toggler{
         background: #F0EFDA;
     }
@@ -256,9 +331,7 @@ nav{
         width: 100%;
         transition: width .3s;
     }
-
     .dropdown{
-
         .dropdown-menu{
             background: color(primary);
             padding: 0;
@@ -279,16 +352,15 @@ nav{
     .dropdown-menu li:hover .sub-menu {
         visibility: visible;
     }
-      
     .dropdown:hover .dropdown-menu {
         display: block;
-    }
-      
+    }  
 }
 
-// -- INDEX CSS -- //
+// INDEX
 .head_slider{
     .slider{
+        position: relative;
         overflow: hidden;
         .img_wrapper{
             height: 100vh;
@@ -303,13 +375,11 @@ nav{
             padding: 1rem 0;
             list-style-type: none;
             z-index: 2;
-    
             li {
                 margin: 0 0.25rem;
                 border: 1px solid color(secondary);
                 border-radius: 50%;
             }
-    
             button {
                 z-index: 2;
                 display: block;
@@ -320,97 +390,52 @@ nav{
                 border-radius: 100%;
                 text-indent: -9999px;
             }
-    
             li.slick-active button {
                 background-color: color(secondary);
             }
         }
-    
-        h1{
-            font-size: 60px;
-            font-weight: bolder;
-        }
-        .text{
-            position: relative;
-            top: 50%;
-            left: 15%;
-            color: white; 
-        }
-        .text:before{
-            content: '';
-            width: 70px;
-            height: 10px;
-            position: absolute;
-            top:50%;
-            left: -80px;
-            transform: translateY(-50%);
-            background: color(primary);
-        }
-        h2{
-            font-size: 50px;
-            font-weight: bolder;
-        }
-        .sub-text{
-            position: absolute;
-            color: color(primary);
-            top:61%;
-            left: 15%;
-        }
-       
-        a{
-            position: absolute;
-            top: 75%;
-            left: 15%;
-            background: color(secondary);
-            color: white;
-            padding: 10px 30px;
-            border-radius: 50px;    
-            overflow: hidden;
-            transition: 1s;
-        }
-        a:before{
-            content: '';
-            display: block;
-            position: absolute;
-            background: rgba(229, 86, 15, 0.5);
-            width: 60px;
-            height: 100%;
-            left: 0;
-            top: 0;
-            opacity: .5;
-            filter: blur(30px);
-            transform: translateX(-130px) skewX(-15deg);
-        }
-        
-        a:after{
-            content: '';
-            display: block;
-            position: absolute;
-            background: rgba(229, 86, 15, 0.2);
-            width: 30px;
-            height: 100%;
-            left: 30px;
-            top: 0;
-            opacity: 0;
-            filter: blur(30px);
-            transform: translateX(-100px) scaleX(-15deg);
-        }
-        
-        a:hover:before {
-           transform: translateX(300px) skewX(-15deg);
-            opacity: .6;
-            transition: 0.5s;
-        }
-        
-        a:hover:after {
-           transform: translateX(300px) skewX(-15deg);
-            opacity: 1;
-            transition: .5s;
-        }
-        a:hover{
-            background: white;
-            color: color(secondary)
-        }
+       .text_wrap{
+           position: absolute;
+           bottom: 150px;
+           left: 150px;
+            h1{
+                font-size: 60px;
+                font-weight: bolder;
+            }
+            .text{
+                color: white; 
+                position: relative;
+            }
+            .text:before{
+                content: '';
+                width: 70px;
+                height: 10px;
+                position: absolute;
+                top:50%;
+                left: -80px;
+                transform: translateY(-50%);
+                background: color(primary);
+            }
+            h2{
+                font-size: 50px;
+                font-weight: bolder;
+            }
+            .sub-text{
+                color: color(primary);
+                margin-bottom: 20px;
+            }
+            a{
+                background: color(secondary);
+                color: white;
+                padding: 10px 30px;
+                border-radius: 50px;    
+                transition: 1s;
+            }
+            a:hover{
+                background: white;
+                color: color(secondary)
+            }
+       }
         
     }
     .slider:after{
@@ -429,26 +454,19 @@ nav{
     }
     
 }
-
 .top_intro{
     margin-bottom: 50px;
-    h1{
-        color: black;
-        font-weight: bolder;
-        padding-bottom: 10px;
-    }
     .box-1{
-        padding: 20px;
+        padding: 0 10px;
     }
     .box-2{
-        padding: 10px;
+        padding: 0 10px;
         text-align: center;
     }
     p{
         color: grey;
     }
 }
-
 .service{
     background: rgba(33, 103, 190, 0.3);
     border-top-left-radius: 100%;
@@ -466,6 +484,7 @@ nav{
         color: color(secondary);
     }
     .title{
+        margin-left: 20px;
         h1{
             color: black;
             font-weight: bolder;
@@ -483,6 +502,9 @@ nav{
         }
         p{
             color: gray;
+        }
+        a{
+            display: block;
         }
     }
     .service_box{
@@ -527,13 +549,14 @@ nav{
         }
         a{
             font-size: 12px;
-            color: color(secondary);
-            background: white;
-            transition: 1s;
-        }
-        a:hover{
             color: white;
             background: color(secondary);
+            transition: 1s;
+            border: 0.5px solid color(secondary);
+        }
+        a:hover{
+            color: color(secondary);
+            background: white;
         }
     }
     .service_box:hover .service_title{
@@ -543,7 +566,6 @@ nav{
         opacity: 1;
     }
 }
-
 .country{
     position: relative;
     background: rgba(33, 103, 190, 0.3);
@@ -557,33 +579,12 @@ nav{
         height: 40px;
         width: 40px;
         position: relative;
-        
-        img{
-            width: 100%;
+        i{
+            font-size: 40px;
+            background: rgba(33, 103, 190, 0.3);
         }
     }
-    .logo:before{
-        content: "";
-        width: 400px;
-        height: 1.5px;
-        position: absolute;
-        right: 45px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: black;
-    }
-    .logo:after{
-        content: "";
-        width: 400px;
-        height: 1.5px;
-        position: absolute;
-        left: 45px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: black;
-    }
     .country_wrap{
-        padding-bottom: 20px;
         position: absolute;
         left: 0;
         right: 0;
@@ -623,7 +624,7 @@ nav{
             background: url(../img/newz.jpg);
         }
         .box{
-            height: 260px;
+            height: 250px;
             margin: 10px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -679,7 +680,7 @@ nav{
         }
     }
     .box:hover .country_name{
-        bottom: 50%;
+        bottom: 45%;
     }
 }
 .country::after{
@@ -687,12 +688,11 @@ nav{
     height: 120px;
     background: white;
     position: absolute;
-    bottom: -45px;
+    bottom: -70px;
     left: -5px;
     right: -5px;
     transform: rotateZ(-4deg);
 }
-
 .counter{
     padding: 0 30px;
     color: color(primary);
@@ -741,20 +741,16 @@ nav{
         padding: 10px;
     }
 }
-
 .testimonials{
     background: url(../img/Testimonials2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
-    .row{
-        height: 100vh;
+    height: 600px;
+    .testimonials_wrap{
+        margin-top: 5%;
     }
-
     .testimonials_top{
-        height: 100%;
-        padding-bottom: 50px;
         margin-left: 30px;
         h1{
             color: black;
@@ -773,7 +769,6 @@ nav{
         }
         p{
             color: gray;
-            padding-left: 50px;
         }
     }
 
@@ -810,6 +805,7 @@ nav{
         // background: rgba(241, 101, 50, 1);
         border-radius: 5px;
         padding: 0 30px;
+        margin-top: 20%;
         .image{         
             padding: 5px;   
             img{
@@ -842,16 +838,19 @@ nav{
             padding: 5px;
         }
     }
-
+    .container{
+        position: relative;
+    }
     .comment_bg{
         position: absolute;
+        bottom: 0;
+        left: 0;
         width: 90%;
         height: 90%;
         opacity: 0.1;
         font-size: 300px;
     }
 }
-
 .news{
     margin-top: 50px;
     padding: 30px;
@@ -887,6 +886,19 @@ nav{
             color: gray;
         }
     }
+    .news_content{
+        a{
+            background: color(secondary);
+            padding: 5px 30px;
+            color: white;
+            border-radius: 5px;
+            border: 0.5px solid color(secondary);
+        }
+        a:hover{
+            color: color(secondary);
+            background: white;
+        }
+    }
 
     h4{
         color: black;
@@ -895,18 +907,6 @@ nav{
     p{
         color: gray;
     }
-    a{
-        background: color(secondary);
-        padding: 5px 30px;
-        color: white;
-        border-radius: 5px;
-        border: 0.5px solid color(secondary);
-    }
-    a:hover{
-        color: color(secondary);
-        background: white;
-    }
-
     .date{
         position: absolute;
         top: 34.4%;
@@ -917,7 +917,6 @@ nav{
         }
     }
 }
-
 .university_partners{
     h1{
         color: black;
@@ -975,7 +974,7 @@ nav{
     }
 }
 
-// -- FOOTER CSS -- //
+// FOOTER
 footer{
     position: relative;
     overflow: hidden;
@@ -1025,11 +1024,13 @@ footer{
             background: white;
             color: color(primary);
             border-radius: 10px;
-            font-size: 120%;
         }
     }
 
     .footer_menu{
+        .row{
+            padding: 20px;
+        }
         a{
             display: block;
         }
@@ -1041,16 +1042,6 @@ footer{
         }
         h5{
             font-weight: bolder;
-        }
-    }
-    .copyright{
-        background: #0d47a1;
-        p{
-            padding: 12px 10px 0 10px;
-            font-size: 13px;
-        }
-        i{
-            padding: 3px;
         }
     }
     .effect::after{
@@ -1076,19 +1067,305 @@ footer:after{
     background: white;
     transform: rotateZ(-4deg);
 }
+.copyright{
+    background: #0d47a1;
+    color: white;
+    p{
+        padding: 12px 10px 0 10px;
+        font-size: 13px;
+    }
+    a{
+        color: white;
+    }
+    i{
+        padding: 3px;
+    }
+}
 
-// -- CONTACT CSS -- //
+// COURSES
+.ielts_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class1.jpg);
+    }
+}
+.gre_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class2.png);
+    }
+}
+.tofels_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class3.png);
+    }
+}
+.gmat_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class4.jpg);
+    }
+}
+.sat_course{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class5.jpg);
+    }
+}
+
+// STUDY ABROAD
+.study_abroad{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/study-abroad.jpg);
+    }
+    .img_wrapper{
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+    .h-wrap{
+        position: absolute;
+        top: 50px;
+        left: 40px;
+        right: 40px;
+        bottom: 50px;
+        background: rgba(0, 0, 0, 0.3);
+        transition: 1s ease;
+
+        h3{
+            color: white;
+            text-align: center;
+            line-height: 250px;
+        }
+    }
+    .country_wrap:hover .h-wrap{
+        transform: scale(1.1);
+    }
+
+}
+.study-usa {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/usabg.jpg);
+    }
+}
+.study-aust {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/austbg.jpg);
+    }
+}
+.study-canada {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/canadabg.jpg);
+    }
+}
+.study-japan{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/japanbg.jpg);
+    }
+}
+.study-newzealand {
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/newzbg.jpg);
+    }
+}
+
+// SERVICE
+.service_innerpage{
+    background: #f5f5f5;
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/service.jpg);
+    }
+    .inner_page_background:after{
+        background: #f5f5f5;
+    }
+    .service_innerpage_wrap{
+        margin-bottom: 20px;
+        overflow: hidden;
+        background: white;
+        padding: 20px;
+        img{
+            width: 100%;
+            transition: 1s ease;
+        }
+        .image{
+            position: relative;
+        }
+        .service_title{
+            background: rgba(33, 103, 190, 0.9);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            font-weight: bolder;
+            transition: 1s ease !important;
+            opacity: 1;
+        }
+    }
+    .service_innerpage_wrap:hover img{
+        transform: scale(1.05);
+    }
+    footer:after{
+        background: #f5f5f5;
+    }
+}
+
+// GALLERY
+.gallery{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/gallery.jpg);
+    }
+    .gallery_item{
+        height: 250px;
+        width: 250px;
+        margin: 10px;
+        transition: 1s ease;
+    }
+    .gallery_item:hover{
+        transform: scale(1.1);
+    }
+}
+
+// ABOUT US
+.about{
+    .inner_page_background{
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/about2.jpg);
+    }
+
+    .ceo_meg{
+        margin: 20px 0; 
+        background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/ceo_bg.jpg);
+        height: 400px;
+        padding: 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+
+        img{
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .meg{
+            padding: 20px;
+            p{
+                padding: 10px 0;
+                word-spacing: 2px;
+                font-size: 14px;
+            }
+            i{
+                padding: 5px;
+            }
+        }
+        color: white;
+        
+    }
+    .mission, .obj{
+        background:linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),url(../img/mission.jpg);
+        border-radius: 10px;
+        color: white;
+        h3{
+            border-bottom: 1px solid white;
+            padding: 10px;
+        }
+        p{
+            padding: 10px 0;
+            word-spacing: 2px;
+            font-size: 14px;
+        }
+        i{
+            padding: 5px;
+        }
+    }
+    .obj{
+        background:linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),url(../img/obj.jpg);
+    }
+
+    .ceo_meg:after{
+        height: 100px;
+        background:white;
+        content: "";
+        position: absolute;
+        top: -14%;
+        left: -5%;
+        right: -5%;
+        transform: rotateZ(-4deg);
+    }
+    .ceo_meg:before{
+        height: 100px;
+        background:white;
+        content: "";
+        position: absolute;
+        bottom: -14%;
+        left: -5%;
+        right: -5%;
+        transform: rotateZ(-4deg);
+    }
+}
+
+// CONTACT
 .contact_us{
     .inner_page_background{
         background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/contact.jpg);
     }
-    .mail_img{
-        padding: 20px;
+    .contact_us_form{
+        background: rgba(33, 103, 190, 0.3);
+        border-top-left-radius: 100%;
+        padding-top: 20px;
+        position: relative;
+        padding-bottom: 60px;
+    }
+    .contact_us_form:after{
+        content: "";
+        height: 150px;
+        width: 100%;
+        background: url(../img/bottom.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
     }
     .form_wrapper{
         img{
             width: 80%;
         }
+        .left_wrap{
+            margin-left: 20px;
+            h1{
+                color: black;
+                font-weight: bolder;
+                position: relative;
+            }
+            h1:before{
+                width: 50px;
+                height: 5px;
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -60px;
+                background: black;
+            }
+            p{
+                color: black;
+                padding: 0;
+            }
+            .text-center{
+                border-bottom: 0.5px solid black;
+            }
+            i{
+                font-size: 30px;
+                padding: 10px;
+                color: color(secondary);
+                transition: 1s ease;
+            }
+            i:hover{
+                color: white;
+            }
+        }
+
     }
     form{
         padding: 30px;
@@ -1104,92 +1381,113 @@ footer:after{
             color: white;
             transition: 1s ease;
             border: 0.5px solid color(seondary);
+            margin: 0 auto;
         }
         button:hover{
             color: color(secondary);
             background:  white;
         }
     }
+    .contact_circle_wrap{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        .item{
+            background: color(secondary);
+            height: 150px;
+            width: 150px;
+            padding: 20px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        i{
+            font-size: 50px;
+            padding: 10px;
+            color: white;
+            line-height: 90px;
+        }
+        p{
+            color: color(secondary);
+            padding: 10px;
+        }
+        .circle_item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .map{
+        margin: 20px auto;
+        overflow: hidden;
+    }
 }
 
-// -- STUDY IN UK CSS -- //
-.study-uk {
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/ukbg.jpg);
+// NEWS FEED
+.news_feed{
+    .news_item{
+        clip-path: inset(0 0 0 0);
+        margin-top: 10px;
+        overflow: hidden;
+        img{
+            height: 300px;
+            width: auto;
+            object-fit: cover;
+            float: left;
+            padding-right: 20px;
+            padding-bottom: 5px;
+        }
+        p{
+            color: #616161;
+        }
+        h3{
+            padding: 15px;
+        }
+        a{
+            color: color(secondary);
+            font-size: 20px;
+        }
     }
-    .container{
+    .study_right_menu{
+        margin-top: 20px;
+    }
+    .news_related{
+        margin-top: 20px;
+        .img_wrapper{
+            height: 200px;
+        }
+        .news_item{
+            z-index: 22;
+            padding-bottom: 10px;
+        }
+        .news_content{
+            a{
+                background: color(secondary);
+                padding: 5px 30px;
+                color: white;
+                border-radius: 5px;
+                border: 0.5px solid color(secondary);
+                font-size: 12px;
+            }
+            a:hover{
+                color: color(secondary);
+                background: white;
+            }
+        }
+        h4{
+            color: black;
+            padding-top: 20px;
+        }
         p{
             color: gray;
         }
-    }
-}
-
-// -- STUDY IN USA CSS -- //
-.study-usa {
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/usabg.jpg);
-    }
-}
-
-// -- STUDY IN AUSTRALIA CSS -- //
-.study-aust {
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/austbg.jpg);
-    }
-}
-
-// -- STUDY IN CANADA CSS -- //
-.study-canada {
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/canadabg.jpg);
-    }
-}
-
-// -- STUDY IN JAPAN CSS -- //
-.study-japan{
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/japanbg.jpg);
-    }
-}
-
-// -- STUDY IN NEW ZEALAND CSS -- //
-.study-newzealand {
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/newzbg.jpg);
-    }
-}
-
-// -- IELTS COURSE CSS --//@at-root
-.ielts_course{
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class1.jpg);
-    }
-}
-
-// --  GRE COURSE CSS --//@at-root
-.gre_course{
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class2.png);
-    }
-}
-
-// -- TOFELS COURSE CSS --//@at-root
-.tofels_course{
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class3.png);
-    }
-}
-
-// -- GMAT COURSE CSS --//@at-root
-.gmat_course{
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class4.jpg);
-    }
-}
-
-// -- SAT COURSE CSS --//@at-root
-.sat_course{
-    .inner_page_background{
-        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/class5.jpg);
+        .date{
+            position: absolute;
+            top: 34.4%;
+            span{
+                background: color(secondary);
+                color: white;
+                padding: 5px;
+            }
+        }
     }
 }

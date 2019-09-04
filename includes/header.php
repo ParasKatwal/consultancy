@@ -15,7 +15,8 @@
     <!-- OWL -->
     <link rel="stylesheet" href="assets_front/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets_front/css/owl.theme.default.min.css">
-    
+    <!-- LIGHTBOX -->
+    <link rel="stylesheet" href="assets_front/css/lightbox.min.css">
 </head>
 <body> 
 
@@ -37,7 +38,7 @@
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#"><img src="assets_front/img/logo2.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -49,7 +50,7 @@
                     Courses
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="lelts.php">IELTS</a>
+                        <a class="dropdown-item" href="ielts.php">IELTS</a>
                         <a class="dropdown-item" href="gre.php">GRE</a>
                         <a class="dropdown-item" href="tofels.php">TOFELS</a>
                         <a class="dropdown-item" href="gmat.php">GMAT</a>
@@ -57,7 +58,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="study-abroad.php">
                     Study Abroad
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -70,22 +71,13 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link effect" href="#">Testimonials</a>
+                    <a class="nav-link effect" href="service.php">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link effect" href="#">News</a>
+                    <a class="nav-link effect" href="gallery.php">Gallery</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About Us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">CEO's Message</a>
-                        <a class="dropdown-item" href="#">Our Team</a>
-                        <a class="dropdown-item" href="#">OFFICE</a>
-                        <a class="dropdown-item" href="#">SERVICE</a>
-                        <a class="dropdown-item" href="#">OPEN HOUR</a>
-                    </div>
+                    <a class="nav-link effect" href="about.php">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link effect" href="contact.php">Contact</a>
@@ -98,21 +90,21 @@
 <section class="application_popup modal" id="ex1">
     <form>
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col col-sm-6">
                 <label for="fullname">Full Name</label>
                 <input type="text" class="form-control" id="" placeholder="Enter your full name">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col col-sm-6">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="" placeholder="Enter your email">
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col col-sm-6">
                 <label for="email">Address</label>
                 <input type="email" class="form-control" id="" placeholder="Enter your full address">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col col-sm-6">
                 <label for="fullname">Phone Number</label>
                 <input type="text" class="form-control" id="" placeholder="Enter your phone number">
             </div>

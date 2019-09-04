@@ -19,47 +19,100 @@
                    <img src="assets_front/img/U.svg" alt="">
                 </div>
             </div>
-            <div class="col-sm-8">
-                <div>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, rem!</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum modi dolor molestiae similique ea soluta, quae quod labore impedit delectus quidem consequuntur fuga corrupti necessitatibus ipsum nostrum alias numquam praesentium.</p>
+            
+            <div class="d-flex justify-content-between">
+                <div class="col-sm-7">
+                    <div>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, rem!</h5>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum modi dolor molestiae similique ea soluta, quae quod labore impedit delectus quidem consequuntur fuga corrupti necessitatibus ipsum nostrum alias numquam praesentium.</p>
+                    </div>
+                    <div>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, rem!</h5>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum modi dolor molestiae similique ea soluta, quae quod labore impedit delectus quidem consequuntur fuga corrupti necessitatibus ipsum nostrum alias numquam praesentium.</p>
+                    </div>
+                    <div>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, rem!</h5>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum modi dolor molestiae similique ea soluta, quae quod labore impedit delectus quidem consequuntur fuga corrupti necessitatibus ipsum nostrum alias numquam praesentium.</p>
+                    </div>
                 </div>
-                <div>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, rem!</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum modi dolor molestiae similique ea soluta, quae quod labore impedit delectus quidem consequuntur fuga corrupti necessitatibus ipsum nostrum alias numquam praesentium.</p>
-                </div>
-                <div>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, rem!</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum modi dolor molestiae similique ea soluta, quae quod labore impedit delectus quidem consequuntur fuga corrupti necessitatibus ipsum nostrum alias numquam praesentium.</p>
-                </div>
-            </div>
-            <div class="study_test_pre col-sm-4 text-center">
-                <h4>Test Preparation</h4>
-                <div class="p-4">
-                    <a class="dropdown-item" href="#">IT</a>
-                    <a class="dropdown-item" href="#">IELTS</a>
-                    <a class="dropdown-item" href="#">GRE</a>
-                    <a class="dropdown-item" href="#">TOFELS</a>
-                    <a class="dropdown-item" href="#">GMAT</a>
-                    <a class="dropdown-item" href="#">SAT</a>
+                <div class="study_right_menu col-sm-4 text-center">
+                   <div class="related mb-4">
+                        <h5>Related</h5>
+                        <div class="p-3"> 
+                            <a href="">Study in USA</a>
+                            <a href="">Study in Australia</a>
+                            <a href="">Study in Canada</a>
+                            <a href="">Study in Japan</a>
+                            <a href="">Study in UK</a>
+                        </div>
+                   </div>
+                   <div class="classes">
+                        <h5>Test Preparation</h5>
+                        <div class="p-3">
+                            <a href="#">IT</a>
+                            <a href="#">IELTS</a>
+                            <a href="#">GRE</a>
+                            <a href="#">TOFELS</a>
+                            <a href="#">GMAT</a>
+                            <a href="#">SAT</a>
+                        </div>
+                   </div>
                 </div>
             </div>
 
             <div class="col-sm-8 mt-5">
-                <h4>INSTITUTIONS</h4>
-                <div class="study_institution">
-                    <a href="#"><img src="assets_front/img/university2.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university3.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university4.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university7.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university2.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university6.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university5.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university6.jpg" alt=""></a>
-                    <a href="#"><img src="assets_front/img/university3.jpg" alt=""></a>
+                <div class="study_left_menu d-flex flex-wrap">
+                    <a href="">
+                        <div class="menu">
+                            <img src="assets_front/img/menu-newzealand.jpg" alt="">
+                            <div class="menu-text">
+                                <h5>New Zealand At Glance</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="menu">
+                            <img src="assets_front/img/menu-2.jpg" alt="">
+                            <div class="menu-text">
+                                <h5>Processing Steps</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="menu">
+                            <img src="assets_front/img/menu-3.jpg" alt="">
+                            <div class="menu-text">
+                                <h5>Education System</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="menu">
+                            <img src="assets_front/img/menu-4.jpg" alt="">
+                            <div class="menu-text">
+                                <h5>Universities</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="menu">
+                            <img src="assets_front/img/menu-5.jpg" alt="">
+                            <div class="menu-text">
+                                <h5>Costing</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="menu">
+                            <img src="assets_front/img/menu-6.jpg" alt="">
+                            <div class="menu-text">
+                                <h5>Required Exams</h5>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-sm-4 study_contact_form mt-md-5 text-center">
+            <div class="col-sm-4 study_contact_form mt-md-5 text-center d-flex flex-column justify-content-center">
                 <h4>INTERESTED TO STUDY IN NEW ZEALAND?</h4>
                 <h5>Contact us</h5>
                 <form>
@@ -88,7 +141,7 @@
                             <textarea class="form-control" id="" rows="3" placeholder="Enter your message"></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </form>
             </div>
         </div>

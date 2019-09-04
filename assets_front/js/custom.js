@@ -30,7 +30,7 @@ $(document).ready(function(){
         autoplayHoverPause:true,
         responsive:{
             0:{
-                items:2
+                items:1
             },
             600:{
                 items:3
@@ -91,10 +91,10 @@ $(document).ready(function(){
         autoplay: true,
         responsive:{
             0:{
-                items:1
+                items:2
             },
             600:{
-                items:2
+                items:5
             },
             1000:{
                 items:7
